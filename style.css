@@ -1,15 +1,93 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
     text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #generate-btn {
+    background-color: #4CAF50;
+    color: #fff;
     padding: 10px 20px;
-    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#funny-text {
-    font-size: 24px;
+#generate-btn:hover {
+    background-color: #3e8e41;
+}
+
+.buttons {
     margin-top: 20px;
+}
+
+#copy-btn, #clear-btn, #share-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#copy-btn:hover, #clear-btn:hover, #share-btn:hover {
+    background-color: #3e8e41;
+}
+
+.history {
+    margin-top: 40px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 25px auto;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        margin: 15px auto;
+        padding: 10px;
+    }
+    #generate-btn {
+        padding: 5px 10px;
+    }
+    #copy-btn, #clear-btn, #share-btn {
+        padding: 5px 10px;
+        margin: 5px;
+    }
 }
