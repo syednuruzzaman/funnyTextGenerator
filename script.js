@@ -1,7 +1,7 @@
 const funnyTexts = [
-    "I'm not arguing, I'm just explaining why I'm right.",
-    "I'm addicted to placebos. I could quit, but it wouldn't make a difference.",
-    "I'm not lazy, I'm just on energy-saving mode.",
+	"I'm not arguing, I'm just explaining why I'm right.",
+	"I'm addicted to placebos. I could quit, but it wouldn't make a difference.",
+	"I'm not lazy, I'm just on energy-saving mode.",
 	"I'm not a morning person. I'm not a night person. I'm a 'whenever the coffee kicks in' person.",
 	"I'm reading a book about anti-gravity. It's impossible to put down.",
 	"I'm not arguing, I'm just passionately expressing my point of view while completely dismissing yours.",
