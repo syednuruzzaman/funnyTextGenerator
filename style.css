@@ -70,6 +70,22 @@ body {
 #history-list li:last-child {
     border-bottom: none;
 }
+/* Footer styles */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 25px auto;
+        padding: 15px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .container {
