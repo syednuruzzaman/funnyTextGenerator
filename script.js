@@ -47,9 +47,50 @@ const funnyTexts = [
 
 const generateBtn = document.getElementById('generate-btn');
 const funnyTextElement = document.getElementById('funny-text');
+const copyBtn = document.getElementById('copy-btn');
+const clearBtn = document.getElementById('clear-btn');
+const shareBtn = document.getElementById('share-btn');
+const historyList = document.getElementById('history-list');
+
+let history = [];
 
 generateBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * funnyTexts.length);
     const funnyText = funnyTexts[randomIndex];
     funnyTextElement.textContent = funnyText;
+    history.push(funnyText);
+    updateHistoryList();
 });
+
+copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(funnyTextElement.textContent);
+    alert('Text copied to clipboard!');
+});
+
+clearBtn.addEventListener('click', () => {
+    funnyTextElement.textContent = '';
+    history = [];
+    updateHistoryList();
+});
+
+shareBtn.addEventListener('click', () => {
+    const text = funnyTextElement.textContent;
+    if (text) {
+        const shareData = {
+            title: 'Funny Text Generator',
+            text: text,
+        };
+        navigator.share(shareData);
+    } else {
+        alert('No text to share!');
+    }
+});
+
+function updateHistoryList() {
+    historyList.innerHTML = '';
+    history.forEach((text) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        historyList.appendChild(li);
+    });
+}
