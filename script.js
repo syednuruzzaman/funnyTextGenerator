@@ -94,3 +94,12 @@ function updateHistoryList() {
         historyList.appendChild(li);
     });
 }
+
+function addHistoryItem(text) {
+    if (history.length >= 3) {
+        history.shift();
+    }
+    history.push(text);
+    updateHistoryList();
+}
+
